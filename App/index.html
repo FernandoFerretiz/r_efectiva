@@ -1,0 +1,154 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Lista de alumnos</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="assets/Bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/Bootstrap/dashboard.css" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/897bbdb75b.js" crossorigin="anonymous"></script>
+    <style>
+      .btn-xs{
+        padding: 1px 6px;
+      }
+      .notifyjs-metro-base {
+	position: relative;
+    min-height: 52px;
+    color:#444;
+}
+
+    .notifyjs-metro-base .image {
+        display: table;
+        position: absolute;
+        height: auto;
+        width: auto;
+        left: 25px;
+        top: 50%;
+
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .notifyjs-metro-base .text-wrapper {
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+        margin: 10px 10px 10px 52px;
+        clear: both;
+        font-family: 'Segoe UI';
+    }
+
+    .notifyjs-metro-base .title {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .notifyjs-metro-base .text {
+        font-size: 12px;
+        font-weight: normal;
+        vertical-align: middle;
+    }
+    </style>
+    <!-- Custom styles for this template -->
+                                      </head>
+
+  <body>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Alumnos</a>
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+          <a class="nav-link" href="#">Sign out</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" onclick="listarfn()" style="cursor: pointer;">
+                  <span class="fa fa-home"></span>
+                  Lista de alumnos <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" onclick="activosfn()" style="cursor: pointer;">
+                  <span class="fa fa-check"></span>
+                  Alumnos Activos Por Grado
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+            <h1 class="h2" id="titleApp">Lista de alumnos</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <button class="btn btn-sm btn-outline-primary" id="agregaralumno">
+                Agregar
+              </button>
+            </div>
+          </div>
+          <div id="mainSection">
+              
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div class="modal  fade" id="modal01" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal01title"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+    <script src="assets/Bootstrap/popper.min.js"></script>
+    <script src="assets/Bootstrap/bootstrap.min.js"></script>
+    <script src="assets/Moment/moment-with-locales.min.js"></script>
+    <script src="assets/NotifyJS/notify.js"></script>
+    <script> const assets = 'http://localhost/Red_Efectiva/API/';</script>
+
+                                    
+            <script src="js/Class/mainClass.js"></script>
+                        
+            <script src="js/Class/alumnos.js"></script>
+                        
+            <script src="js/Alumnos/lista.js"></script>
+                        
+    <script>
+        if(typeof __onLoad !== 'undefined'){
+            window.addEventListener('load',function(){
+                __onLoad();
+            });
+        }
+    </script>
+
+  </body>
+</html>
